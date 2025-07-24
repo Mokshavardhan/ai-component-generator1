@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Production build folders
+frontend/build/
+frontend/.next/
+backend/dist/
+
+# Environment variables (very important for security)
+.env
+.env*.local
+
+# Log files
+*.log
+
+# IDE and OS files
+.vscode/
+.DS_Store
+Thumbs.db
