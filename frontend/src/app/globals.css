@@ -1,0 +1,550 @@
+/* src/app/globals.css */
+
+/* ... your existing .main-layout styles ... */
+
+/* --- Replace the previous auth styles with these --- */
+
+body {
+  margin: 0;
+  /* 👇 Use the new font */
+  font-family: 'Inter', sans-serif;
+  /* 👇 Add a subtle gradient background */
+  background: #0f0c29;
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  color: #f0f0f0;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.auth-form {
+  background-color: rgba(27, 27, 40, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+}
+
+.auth-form h1 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 2.2em;
+}
+
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group svg {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  width: 20px;
+  height: 20px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 14px 14px 14px 50px; /* Make space for the icon */
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #f0f0f0;
+  font-size: 1em;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: #7b4397;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.auth-form button {
+  padding: 14px 20px;
+  border-radius: 8px;
+  border: none;
+  background-image: linear-gradient(to right, #7b4397, #dc2430);
+  background-size: 200% auto;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.auth-form button:hover {
+  background-position: right center; /* change the direction of the change here */
+  transform: scale(1.05);
+}
+
+.auth-form .error-message {
+  color: #ff8a8a;
+  margin-top: 16px;
+  font-weight: 500;
+}
+
+.auth-form .switch-link {
+  margin-top: 24px;
+  color: #ccc;
+}
+
+.auth-form .switch-link a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.auth-form .switch-link a:hover {
+  text-decoration: underline;
+  color: #ddd;
+}
+.chat-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-history {
+  flex-grow: 1;
+  overflow-y: auto;
+  ppadding: 16px 10px 16px 0;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chat-message {
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.chat-message.user {
+  background-color: #4a4a69;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.chat-message.assistant {
+  background-color: #3a3a50;
+  align-self: flex-start;
+}
+
+.chat-form {
+margin-top: auto; /* Pushes the form to the bottom */
+  padding-top: 16px; /* Adds space above the form */
+  border-top: 1px solid var(--border-color);
+  /* 👇 This ensures the form does not shrink */
+  flex-shrink: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.chat-form input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+.chat-form button {
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  background-color: #646cff;
+  color: white;
+  cursor: pointer;
+}
+
+
+.code-tabs {
+  display: flex;
+  border-bottom: 1px solid #444;
+}
+.code-tabs button {
+  padding: 10px 15px;
+  border: none;
+  background-color: transparent;
+  color: #aaa;
+  cursor: pointer;
+}
+.code-tabs button.active {
+  color: #fff;
+  border-bottom: 2px solid #646cff;
+}
+.code-content {
+  height: calc(100% - 41px); /* Adjust height to account for tabs */
+  overflow: auto;
+}
+.code-content pre {
+  margin: 0 !important;
+  height: 100%;
+}
+/* src/app/globals.css */
+
+:root {
+  --background-dark: #111015;
+  --background-light: #1c1b22;
+  --background-accent: #2a2933;
+  --text-primary: #e4e4e7;
+  --text-secondary: #a1a1aa;
+  --brand-primary: #818cf8;
+  --brand-secondary: #c084fc;
+  --border-color: #3f3f46;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+/* Main Layout */
+.main-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  grid-template-rows: 60vh 1fr;
+  height: 100vh;
+  gap: 12px;
+  padding: 12px;
+}
+
+/* Chat Panel */
+.chat-panel {
+  grid-row: 1 / 3;
+  background-color: var(--background-light);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.chat-panel h2 {
+  font-size: 1.25em;
+  margin: 0 0 16px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+}
+.chat-history {
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-right: 10px;
+}
+.chat-message {
+  padding: 10px 14px;
+  border-radius: 10px;
+  max-width: 85%;
+  line-height: 1.5;
+  font-size: 0.9em;
+}
+.chat-message.user {
+  background: linear-gradient(to right, var(--brand-primary), var(--brand-secondary));
+  color: #fff;
+  align-self: flex-end;
+  border-bottom-right-radius: 2px;
+}
+.chat-message.assistant {
+  background-color: var(--background-accent);
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+}
+.chat-form {
+margin-top: auto; /* Pushes the form to the bottom */
+  padding-top: 16px; /* Adds space above the form */
+  border-top: 1px solid var(--border-color);
+  /* 👇 This ensures the form does not shrink */
+  flex-shrink: 0;
+  display: flex;
+  gap: 10px;}
+.chat-form input {
+  flex-grow: 1;
+  background-color: var(--background-dark);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 0.9em;
+}
+.chat-form input:focus {
+  outline: none;
+  border-color: var(--brand-primary);
+}
+.chat-form button {
+  border: none;
+  background: var(--brand-primary);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.chat-form button:hover {
+  background: #6f7afa;
+}
+
+/* Preview & Code Editor Panels */
+.preview-window,
+.code-editor {
+  background-color: var(--background-light);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.panel-header {
+  padding: 12px 20px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--background-accent);
+}
+.preview-content {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.preview-content iframe {
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+.code-editor .panel-header {
+  display: flex;
+  padding: 0;
+  padding-left: 10px;
+}
+.code-tabs button {
+  padding: 12px 18px;
+  border: none;
+  background-color: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+.code-tabs button.active {
+  color: #fff;
+  border-bottom-color: var(--brand-primary);
+}
+.code-content {
+  flex-grow: 1;
+  overflow: auto;
+}
+.code-content pre {
+  margin: 0 !important;
+  height: 100%;
+  padding-top: 16px !important;
+  background-color: transparent !important;
+}
+
+/* Auth Pages */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.auth-form {
+  background-color: var(--background-light);
+  border: 1px solid var(--border-color);
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.chat-header h2 {
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.logout-button {
+  border: 1px solid var(--border-color);
+  background-color: var(--background-accent);
+  color: var(--text-secondary);
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logout-button:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+
+.dashboard-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.new-session-btn {
+  border: none;
+  background: var(--brand-primary);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s;
+}
+
+.new-session-btn:hover {
+  background: #6f7afa;
+}
+
+.sessions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.session-card {
+  background-color: var(--background-light);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+.session-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--brand-primary);
+}
+
+.session-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+  color: var(--text-primary);
+}
+
+.session-card p {
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--text-secondary);
+}
+
+.delete-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn:hover {
+  background-color: var(--background-accent);
+  color: #ff6b6b;
+}
+/* src/app/globals.css */
+
+/* ... your other styles ... */
+
+.panel-header {
+  display: flex; /* Make it a flex container */
+  justify-content: space-between; /* Push items to ends */
+  align-items: center; /* Center items vertically */
+  padding: 0;
+  padding-left: 10px;
+}
+
+.code-actions {
+  display: flex;
+  gap: 10px;
+  padding-right: 15px;
+}
+
+.action-btn {
+  background-color: var(--background-accent);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.8em;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}

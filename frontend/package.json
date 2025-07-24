@@ -1,0 +1,35 @@
+{
+  "name": "ai-component-generator-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@babel/generator": "^7.28.0",
+    "@babel/parser": "^7.28.0",
+    "@babel/traverse": "^7.28.0",
+    "@types/react-color": "^3.0.13",
+    "axios": "^1.11.0",
+    "jszip": "^3.10.1",
+    "next": "15.4.3",
+    "react": "19.1.0",
+    "react-color": "^2.19.3",
+    "react-dom": "19.1.0",
+    "react-syntax-highlighter": "^15.6.1",
+    "zustand": "^5.0.6"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.3",
+    "typescript": "^5"
+  }
+}
